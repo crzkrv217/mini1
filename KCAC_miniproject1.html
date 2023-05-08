@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hapag ni Ima</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <style>
+    .card-footer {
+      font-family: Times;
+    }
+    body {
+      background-image: url('https://img.freepik.com/free-photo/close-up-modern-cozy-kitchen-white-brown-colors-with-stuff-cooker-decorative-fir-tree-branches-christmas-decorations_132075-11436.jpg?w=2000');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    p, h5 {
+      color: black;
+    }
+    button {
+      font-family: 'Courier New', Courier !important;
+    }
+  </style>
+  </head>
+
+<body class="mt-1 mx-3" style="font-family: Monotype Corsiva;color: antiquewhite !important;">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-light">
+    <div class="container-fluid">
+      <section class="navbar-brand h3" href="#" style="font-size: 60px;color: antiquewhite;">Hapag ni Ima</section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color:antiquewhite">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:30px;">
+          <!-- Dine In Modal Button -->
+          <li class="nav-item">
+            <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="color:antiquewhite">Dine-In Reservation</a>
+                        
+            <!-- Dine In Modal Setup -->
+            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Book your reservation.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body" style="font-size: medium;color:black">
+                  <div class="row g-3 mb-3">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="ResEmail" aria-describedby="emailHelp" placeholder="Enter e-mail address." required>
+                    <div id="emailHelp" class="form-text" style="font-size: small;">Please use a valid email. We won't share this with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" pattern="[+]63 [0-9]{10}" class="form-control" id="ResTel" aria-describedby="emailHelp" placeholder="Enter your phone number. " required>
+                    <div id="telHelp" class="form-text" style="font-size: small;">We will call you 1 hour before your allotted schedule for confirmation of attendance.</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Table for </label>
+                    <select class="form-select" id="inputGroupSelect01" required>
+                      <option selected>Select number of pax...</option>
+                      <option value="1">One(1)</option>
+                      <option value="2">Two(2)</option>
+                      <option value="3">Three(3)</option>
+                      <option value="4">Four(4)</option>
+                      <option value="5">Five(5)</option>
+                      <option value="6">Six(6)</option>
+                      <option value="7">Seven(7)</option>
+                      <option value="8">Eight(8)</option>
+                      <option value="9">Nine(9)</option>
+                      <option value="10">Ten(10)</option>
+                      <option value="11">Eleven(11)</option>
+                      <option value="12">Twelve(12)</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <label id="ReserveDate" class="col-4">Select Date & Time: </label>
+                    <input type="date" class="col-3">
+                    
+                    <input type="time" class="col-3">
+                    </span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <p style="font-size:medium"><em>Please note that the reservation fee is not refundable.</style=></em></p>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" href="/payment.html" target="_blank">Book!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+          <!-- PU / Del Modal Button -->
+          <li class="nav-item">
+            <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" style="color:antiquewhite">Pick-up / Delivery</a>
+                        
+            <!-- PU / Del Modal Setup -->
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Delivery / Pick-up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body" style="font-size: medium;color:black">
+                  <div class="accordion row" id="accordionExample">
+                    <div class="accordion-item col-6 border-0">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Delivery" aria-expanded="true" aria-controls="Delivery">For Delivery</button>
+                      </h2>
+                    </div>
+                    <div class="accordion-item col-6 border-0">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#PickUp" aria-expanded="false" aria-controls="PickUp">For Pick-up</button>
+                      </h2>
+                    </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="ResEmail" aria-describedby="emailHelp" placeholder="Enter e-mail address." required>
+                    <div id="emailHelp" class="form-text" style="font-size: small;">Please use a valid email. We won't share this with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" pattern="[+]63 [0-9]{10}" class="form-control" id="ResTel" aria-describedby="emailHelp" placeholder="Enter your phone number. " required>
+                    <div id="telHelp" class="form-text" style="font-size: small;">We will call you once the order is posted to confirm details of your order.</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <p>Select the items and quantity for your order.</p>
+                    <div class="form-check">
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item1">
+                          <label class="form-check-label col-8" for="Item1">Kare-kare</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item2">
+                          <label class="form-check-label col-8" for="Item2">Pancit Guisado</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item3">
+                          <label class="form-check-label col-8" for="Item3">Beef Nilaga</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item4">
+                          <label class="form-check-label col-8" for="Item4">Afritadang Manok</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item5">
+                          <label class="form-check-label col-8" for="Item5">Pork & Beef Aftritada</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item6">
+                          <label class="form-check-label col-8" for="Item6">Menudo</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <hr>
+                      <div>
+                        Drinks served on 330mL glasses.
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item7">
+                          <label class="form-check-label col-8" for="Item7">House Blend Iced Tea
+                          </label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item8">
+                          <label class="form-check-label col-8" for="Item8">Blue Lemonade</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item9">
+                          <label class="form-check-label col-8" for="Item9">Soft Drinks</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                      <div class="col">
+                        <span>
+                          <input class="form-check-input" type="checkbox" value="" id="Item10">
+                          <label class="form-check-label col-8" for="Item10">Beer</label>
+                          <input class="col-2" type="number" min="1">
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="Delivery" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <input type="text" class="form-control" id="Address" aria-describedby="emailHelp" placeholder="Enter delivery address." required>
+                      </div>
+                      <br>
+                      <div>  
+                        <label id="DateTime" class="col-4">Select Date & Time: </label>
+                        <input type="date" class="col-3">                        
+                        <input type="time" class="col-3">
+                    </div>
+                  </div>
+                  <div id="PickUp" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div>  
+                        <label id="DateTime" class="col-4">Select Date & Time: </label>
+                        <input type="date" class="col-3">                        
+                        <input type="time" class="col-3">
+                      </div>
+                    </div>
+                  </div>        
+                </div>
+                <div class="modal-footer">
+                  <p style="font-size:medium"><em>Please note that the reservation fee is not refundable.</style=></em></p>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" href="/payment.html" target="_blank">Book!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+          <!-- Catering Modal Button -->
+          <li class="nav-item">
+            <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" style="color:antiquewhite">Catering Services</a>
+                        
+            <!-- Catering Modal Setup -->
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Book your reservation.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <div class="modal-body" style="font-size: medium;color:black">
+                  <div class="row g-3 mb-3">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="ResEmail" aria-describedby="emailHelp" placeholder="Enter e-mail address." required>
+                    <div id="emailHelp" class="form-text" style="font-size: small;">Please use a valid email. We won't share this with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" pattern="[+]63 [0-9]{10}" class="form-control" id="ResTel" aria-describedby="emailHelp" placeholder="Enter your phone number. " required>
+                    <div id="telHelp" class="form-text" style="font-size: small;">We will call you two(2) days prior to scheduled date for confirmation of event.</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect02">Catering Type </label>
+                    <select class="form-select" id="inputGroupSelect02" required>
+                      <option selected>Select catering type</option>
+                      <option value="Plated">Plated (Food will be served on a plate.)</option>
+                      <option value="Buffet">Buffet (Guests can get food from the food stations.)</option>                    
+                    </select>
+                  </div>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect03">Select Package </label>
+                    <select class="form-select" id="inputGroupSelect03" required>
+                      <option selected>Select your preferred set</option>
+                      <option value="Set1">Set 1</option>
+                      <option value="Set2">Set 2</option>
+                      <option value="Set3">Set 3</option>  
+                      <option value="Set4">Set 4</option>                  
+                    </select>
+                  </div>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="CatPax">Food for </label>
+                    <input type="number" class="form-control" id="CatPax" aria-describedby="emailHelp" placeholder="Enter number of pax. Min of 25 and max of 300." min="25" max="300" required>
+                  </div>
+                  <div class="row">
+                    <label id="ReserveDate" class="col-4">Select Date & Time: </label>
+                    <input type="date" class="col-3">
+                    
+                    <input type="time" class="col-3">
+                    </span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <p style="font-size:medium"><em>Catering fee is refundable but will depend on number of days before the event.</style=></em></p>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" href="/payment.html" target="_blank">Book!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#MENU" style="color:antiquewhite">Menu</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="font-family: times;">
+          <button class="btn btn-outline-light" type="submit" style="color:antiquewhite"><b>Search</b></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-3">
+
+    <div>
+      <blockquote style="font-size: 25px;">Mom's home-cooking that will let you feel loved.</blockquote>
+      <blockquote style="font-size: 25px;color:black;font-weight: bold;">You may contact us at hapag-ni-ima@gmail.com or (+63)912-345-6789 for inquiries, reservation concerns and/or cancelation requests.</blockquote>
+    </div>
+
+    <div>
+      <h3><center>BEST SELLERS</center></h3>
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/red-meats-&-red-meat-dishes/kare-kare/kare-kare-main.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://images.aws.nestle.recipes/resized/371a6aa9029c84dcaab7e945d14546fc_beef_pancit_canton_guisado_(main_image)_744_419.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://images.summitmedia-digital.com/yummyph/images/2019/10/11/beefymushroomnilagarecipe2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="MENU">
+      <h3><CENTER>MENU</CENTER></h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/red-meats-&-red-meat-dishes/kare-kare/kare-kare-main.jpg" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Kare-Kare</h5>
+              <p class="card-text">Kare Kare is a traditional Filipino stew complimented with a thick savory peanut sauce. Served with special home-made bagoong alamang.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 360.00*.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://images.aws.nestle.recipes/resized/371a6aa9029c84dcaab7e945d14546fc_beef_pancit_canton_guisado_(main_image)_744_419.jpg" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pancit Guisado</h5>
+              <p class="card-text">Pancit Guisado is a Filipino noodle dish composed of rice noodles, shredded chicken, shrimp, and vegetables. The noodles are locally called bihon.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 220.00*.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://images.summitmedia-digital.com/yummyph/images/2019/10/11/beefymushroomnilagarecipe2.jpg" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Beef Nilaga</h5>
+              <p class="card-text">This Filipino-style boiled soup with fork-tender beef shanks, tendon, and vegetables is hearty and tasty.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 300.00*.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://www.pinoyrecipe.net/wp-content/uploads/2011/10/Afritadang-Manok-1200x900.jpg" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Afritadang Manok</h5>
+              <p class="card-text">Chicken Afritada is a classic Filipino stew made with chicken braised in tomato sauce with potatoes, carrots, and bell peppers.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 220.00*.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.ytimg.com/vi/O0Si96jo2xo/maxresdefault.jpg" class="card-img-top  h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pork & Beef Aftritada</h5>
+              <p class="card-text">Chicken Afritada is a classic Filipino stew made of beef and pork, braised in tomato sauce with potatoes, carrots, and bell peppers.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 340.00*.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://images.summitmedia-digital.com/yummyph/images/2021/06/25/menudorecipe-batangasstyle-1.jpg" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Menudo</h5>
+              <p class="card-text">Menudo is a traditional stew from the Philippines made with pork and sliced liver in tomato sauce with carrots and potatoes.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Starts at &#8369 260.00*.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3><center>DRINKS</center></h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-75">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUv4i5rJrjitTKnv9bvtkdu_6q72bhrMH6g&usqp=CAU" class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">House Blend Iced Tea</h5>
+              <p class="card-text">A premium iced tea made with real honey and calamansi, it has the refreshing taste of brewed tea.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Price at &#8369 80.00* per pitcher or &#8369 25.00* per glass.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-75">
+            <img src="https://cdn.ngnw.ph/images/blog/images/negosyo-now-recipe-blue-lemonade.jpg" class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blue Lemonade</h5>
+              <p class="card-text">Made of sparkling water, lemon juice, blueberries, blackberries and honey.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Price at &#8369 70.00* per pitcher or &#8369 20.00* per glass.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-75">
+            <img src="https://www.grandiose.ae/media/catalog/product/cache/8a816dd05f10262f190c4e443a565966/5/0/5000112607598.jpg" class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Soft Drinks</h5>
+              <p class="card-text">Choose either Coke, Fanta, Sprite.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Price  at &#8369 25.00* per 300ml bottle or &#8369 115.00* per 1.5L bottle.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-75">
+            <img src="https://static.wixstatic.com/media/7ff119_2bd594e0ee6a49b5949180e865275f89~mv2.jpg/v1/fill/w_640,h_366,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/7ff119_2bd594e0ee6a49b5949180e865275f89~mv2.jpg" class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Beer</h5>
+              <p class="card-text">Choose either Red Horse, San Mig Pale Pilsen or San Mig Light.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Price at &#8369 60.00* per 330ml bottle or &#8369 90.00* per can.</small>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="mx-3" style="font-family: Times">
+    <article>*Prices may change without notice.</article>
+
+    <hr>
+
+    <article>EST.2023</article>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
